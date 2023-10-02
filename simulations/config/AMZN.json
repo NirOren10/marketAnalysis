@@ -1,0 +1,7 @@
+{
+    "take_profit" : 1,
+    "stop_loss" : -0.3,
+    "deviation_threshold" : 0.1,
+    "max_pos_time" : 10,
+    "moving_average_window" : 10
+}
