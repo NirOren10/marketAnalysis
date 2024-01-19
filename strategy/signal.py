@@ -18,18 +18,19 @@ class Signal:
                     signal,reason = func()
                     if signal:
                         return signal, reason
+        return None, None
                     
 
     
     def moving_avg_price_deviation(self):
         deviation = (self.row['price'] - self.row['moving_average']) / self.row['moving_average'] * 100
         
-        if deviation < -self.config['deviation_threshold']:
-            return "buy"
-        elif deviation > self.config['deviation_threshold']:
-            return "sell"
+        if deviation < -self.config['mov_avg_price_deviation_threshold']:
+            return "buy",deviation
+        elif deviation > self.config['mov_avg_price_deviation_threshold']:
+            return "sell",deviation
         else:
-            return None
+            return None,None
 
     def moving_avg_crossover(self):
         return None, None
@@ -42,8 +43,3 @@ class Signal:
                 return "buy","mov_avg_crossover"
             if self.row["mov_avg_deviation"] < -self.config["mov_avg_crossover_deviation_threshold"]:
                 return "sell","mov_avg_crossover"
-
-
-# if __name__ == "__main__":
-#     signal = Signal(row=[],config={})
-#     signal.find_signal()

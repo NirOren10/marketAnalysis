@@ -3,6 +3,9 @@
     "stop_loss" : -0.3,
     "mov_avg_price_deviation_threshold" : 0.1,
     "mov_avg_crossover_deviation_threshold" : 0.1,
-    "max_pos_time" : 10,
-    "moving_average_window" : 10
+    "max_pos_time" : 50,
+    "moving_average_window" : 10,
+    "long_moving_avg" : 50,
+    "short_moving_avg" : 10,
+    "min_position_time" : 10
 }

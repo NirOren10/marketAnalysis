@@ -1,0 +1,11 @@
+
+
+
+if buy signal and no open sells positions:
+    buy 1 stock
+if buy signal and open sells positions:
+    close all sells
+
+same for other way
+
+
